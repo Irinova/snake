@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf5ea584-5268-44b6-9a1c-dadc556c3436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608017882492</updated>
       <workItem from="1608017889962" duration="31000" />
-      <workItem from="1608017925576" duration="1900000" />
+      <workItem from="1608017925576" duration="6445000" />
     </task>
     <servers />
   </component>
@@ -49,10 +50,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608017946670">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608023150244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608017946670" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608023150244" />
     <state width="1877" height="356" key="GridCell.Tab.0.bottom" timestamp="1608018784779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

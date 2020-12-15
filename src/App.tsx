@@ -11,7 +11,7 @@ function randomIntFromInterval(min: number, max: number) { // min and max includ
 }
 
 function App() {
-  const [ rowLength ] = useState(11);
+  const [ rowLength ] = useState(21);
   const [ cells ] = useState(Array.apply(null, Array(rowLength * rowLength)).map(() => null));
   const [ snake, setSnake ] = useState([ Math.floor(cells.length / 2)]);
   const [ direction, setDirection ] = useState<IDirection>('ArrowRight');
@@ -27,16 +27,34 @@ function App() {
       return snake.includes(i);
   }
 
+  const detectPosition = () => {
+      let newPosition = snake[snake.length - 1] + step[direction];
+      console.log('newPosition', newPosition)
+      if (newPosition < 0) {
+          newPosition = cells.length - rowLength + (rowLength + newPosition);
+      }
+      if (newPosition > cells.length) {
+          newPosition = rowLength - (cells.length - newPosition + rowLength);
+          console.log('>',newPosition)
+      }
+      if (direction === 'ArrowRight' && (newPosition % rowLength) === 0) {
+          newPosition = newPosition - rowLength;
+      }
+      if (direction === 'ArrowLeft' && ((newPosition + 1) % rowLength) === 0) {
+          newPosition = newPosition + rowLength;
+      }
+      return newPosition;
+  }
+
   const move = () => {
-      const newSnakeCell = snake[snake.length - 1] + step[direction];
-      let newSnake;
+      const newSnakeCell = detectPosition();
       if (newSnakeCell !== applePosition) {
           snake.shift();
       }
       else {
           setApplePosition(randomIntFromInterval(0, cells.length - 1))
       }
-      newSnake = [...snake, newSnakeCell];
+      const newSnake = [...snake, newSnakeCell];
       setSnake(newSnake);
   }
 
