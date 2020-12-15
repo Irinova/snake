@@ -1,0 +1,22 @@
+.field {
+  display: grid;
+  border: 3px solid black;
+  width: max-content;
+}
+.cell {
+  width: 1rem;
+  height: 1rem;
+}
+.snake {
+  z-index: 1;
+  background: #195300;
+}
+.apple::after {
+  content: '';
+  position: relative;
+  width: 100%;
+  display: table;
+  height: 100%;
+  border-radius: 50%;
+  background: red;
+}
