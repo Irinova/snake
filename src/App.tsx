@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 type IDirection = string;
@@ -42,7 +42,6 @@ function App() {
 
   function getKeyValue(e: KeyboardEvent) {
       setDirection(e.code);
-      move();
   }
 
   useEffect(() => {

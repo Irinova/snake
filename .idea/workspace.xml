@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf5ea584-5268-44b6-9a1c-dadc556c3436" name="Default Changelist" comment="" />
+    <list default="true" id="bf5ea584-5268-44b6-9a1c-dadc556c3436" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608017882492</updated>
       <workItem from="1608017889962" duration="31000" />
-      <workItem from="1608017925576" duration="1383000" />
+      <workItem from="1608017925576" duration="1900000" />
     </task>
     <servers />
   </component>
