@@ -10,8 +10,13 @@ function randomIntFromInterval(min: number, max: number) { // min and max includ
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function App() {
-  const [ rowLength ] = useState(21);
+interface Props {
+    fieldLength: number,
+    staticApplePosition: number | boolean
+}
+
+const App: React.FC<Props> = ({ fieldLength, staticApplePosition = false}) => {
+  const [ rowLength ] = useState(fieldLength);
   const [ cells ] = useState(Array.apply(null, Array(rowLength * rowLength)).map(() => null));
   const [ snake, setSnake ] = useState([ Math.floor(cells.length / 2)]);
   const [ direction, setDirection ] = useState<IDirection>('ArrowRight');
@@ -21,21 +26,19 @@ function App() {
       ArrowUp: -rowLength,
       ArrowDown: rowLength
   });
-  const [ applePosition, setApplePosition ] = useState(randomIntFromInterval(0, cells.length - 1))
+  const [ applePosition, setApplePosition ] = useState(staticApplePosition || randomIntFromInterval(0, cells.length - 1))
 
-  const isSnake = (i: number):boolean => {
+  const isSnake = (i: number): boolean => {
       return snake.includes(i);
   }
 
-  const detectPosition = () => {
+  const detectPosition = (): number => {
       let newPosition = snake[snake.length - 1] + step[direction];
-      console.log('newPosition', newPosition)
       if (newPosition < 0) {
           newPosition = cells.length - rowLength + (rowLength + newPosition);
       }
       if (newPosition > cells.length) {
           newPosition = rowLength - (cells.length - newPosition + rowLength);
-          console.log('>',newPosition)
       }
       if (direction === 'ArrowRight' && (newPosition % rowLength) === 0) {
           newPosition = newPosition - rowLength;
